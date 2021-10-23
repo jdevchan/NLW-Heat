@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* estilos versão desktop */
+@media (min-width: 720px) {
+  body {
+    background: url(images/desktop.svg) no-repeat center/cover;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .badge {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 0;
+  }
+
+  .range {
+    width: 4rem;
+    height: 9.875rem;
+    background: linear-gradient(161.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+
+  .smash {
+    background: #121214;
+    width: 5rem;
+    height: 0.5rem;
+    top: 156px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  main {
+    background: url(images/background2.svg) #202024;
+    width: 22.375rem;
+    min-height: 33.75rem;
+    height: 33.75rem;
+    position: absolute;
+    top: 140px;
+  }
+
+  .container {
+    position: absolute;
+    top: -120px;
+    left: 55px;
+  }
+
+  a {
+    transition: 0.3s;
+  }
+
+  a:hover {
+    transform: scale(1.2);
+  }
+}
