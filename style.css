@@ -17,6 +17,10 @@ body {
   place-items: center;
 }
 
+#particles-js {
+  display: none;
+}
+
 main {
   background: url(images/background.svg) no-repeat center/cover;
   width: 100vw;
@@ -95,6 +99,14 @@ ul {
     background-color: black;
     width: 100vw;
     height: 100vh;
+  }
+
+  #particles-js {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: fixed;
   }
 
   .badge {
